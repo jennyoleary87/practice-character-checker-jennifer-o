@@ -11,3 +11,9 @@ Your application should:
 4. Print out the character
 */
 
+const readlineSync = require('readline-sync');
+
+let userPhrase = readlineSync.question("Enter a word or phrase to check the index of: ") // prompt user for a word or phrase
+console.log("Your word/phrase is: " + userPhrase) // repeat it to them to clarify
+let numIndex = readlineSync.question("Enter a number to check the character index: "); // prompt user for index number to check within their word/phrase
+console.log("The character at index " + numIndex + " is " + userPhrase[numIndex] + ". "); // print out character of chosen index number
